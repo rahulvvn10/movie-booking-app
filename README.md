@@ -125,9 +125,3 @@ MongoDB Database
 * Building UI that adapts to dynamic data
 
 ---
-
-## 👨‍💻 Author
-
-Rahul V
-
----
