@@ -1,0 +1,58 @@
+.crd {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Aligns content vertically */
+    width: 1700px; /* Adjust width */
+    height: 180px;
+    border-radius: 8px;
+    border: 2px solid #f7d75a;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(247, 215, 90, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+    /* Optional background */
+    padding: 10px;
+}
+
+.crd img {
+    width: 250px;
+    height: 180px;
+    border-radius: 8px;
+    border-bottom: #f7d75a 0.5px solid;
+}
+
+.crd-content {
+    flex: 1; /* Allows text section to take remaining space */
+    padding: 0 20px; /* Adds spacing between image and text */
+    text-align: left;
+}
+
+.crd h2 {
+    flex: 1; /* Allows text section to take remaining space */
+    padding: 0 20px; /* Adds spacing between image and text */
+    text-align: left;
+    color: #fffefc;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.crd p {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btnt {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #f7d75a;
+    font-weight: 600;
+    color: rgb(24, 23, 23);
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+.btnc:hover{
+    border: #f7d75a 2px solid;
+    background-color: transparent;
+    color:#f7d75a;
+}

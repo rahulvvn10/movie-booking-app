@@ -1,0 +1,8 @@
+
+
+.slider .slide:first-child {
+    display: block;
+}
+.slider{
+    width:1400px;
+}

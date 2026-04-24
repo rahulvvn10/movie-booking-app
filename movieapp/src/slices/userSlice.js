@@ -1,0 +1,96 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const userSlice=createSlice({
+    name:"user",
+    initialState:{
+        user:[],
+        message:null,
+        isAuthenticated:false,
+        loading:false,
+        error:null
+    },
+    reducers:{
+        registerRequest(state,action){
+            return{
+                ...state,
+                loading:true
+            }
+        },
+        registerSuccess(state,action){
+            return{
+                
+                loading:false,
+                user:action.payload
+            }
+        },
+        registerFail(state,action){
+            return{
+                loading:false,
+                error:action.payload.message
+            }
+        },
+        loginRequest(state,action){
+            return{
+                ...state,
+                loading:true,
+                message:null
+            }
+        },
+        loginSuccess(state,action){
+            return{
+                user:action.payload.user,
+                message:action.payload.message,
+                isAuthenticated:true,
+                loading:false
+
+            }
+        },
+        loginFail(state,action){
+            return{
+                ...state,
+                loading:false,
+                error:action.payload.message
+            }
+        },
+        loadUserRequest(state,action){
+            return{
+                loading:true,
+                ...state
+            }
+        },
+        loadUserSuccess(state,action){
+            return{
+                loading:false,
+                user:action.payload.user,
+                isAuthenticated:true,
+            }
+        },
+        loadUserFail(state,action){
+            return{
+                loading:false,
+                error:action.payload
+            }
+        },
+        logoutRequest(state,action){
+            return{...state,
+                loading:true
+            }
+        },
+        logoutSuccess(state,action){
+            return {
+                isAuthenticated:false,
+                user:[],
+                loading:false
+            }
+        },
+        logoutFail(state,action){
+            return{
+                ...state,
+                error:action.payload,
+                loading:false
+            }
+        }
+    }
+})
+export const {registerRequest,registerFail,registerSuccess,loginRequest,loginSuccess,loginFail,loadUserRequest,loadUserFail,loadUserSuccess,logoutFail,logoutRequest,logoutSuccess}=userSlice.actions;
+export default userSlice.reducer;
